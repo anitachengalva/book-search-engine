@@ -11,7 +11,7 @@ Behind the scenes, it consists of a [Google Books API](https://developers.google
 ## Deployed Link
 
 This application is deployed through [Heroku](https://www.heroku.com/what).
-> https://www.heroku.com/ placeholder link
+> https://git.heroku.com/akc-book-search.git 
 
 ## Table of Contents
 
