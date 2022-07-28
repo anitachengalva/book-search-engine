@@ -8,7 +8,10 @@ This application is a search engine for books. The user is presented with a sear
 Behind the scenes, it consists of a [Google Books API](https://developers.google.com/books) search engine, built with a [RESTful API](https://aws.amazon.com/what-is/restful-api/), which is then refactored to be a [GraphQL API](https://graphql.org/learn/) with [Apollo Server](https://www.apollographql.com/docs/apollo-server/). It is a full-stack MERN application ([MongoDB](https://www.mongodb.com/)-[Express.js](https://expressjs.com/)-[React](https://reactjs.org/)-[Node.js](https://nodejs.org/en/)), deployed to [Heroku](https://www.heroku.com/what) with a [MongoDB](https://www.mongodb.com/) database using [MongoDB Atlas](https://www.mongodb.com/atlas/database).
 
 
-## Deployed Link(s)
+## Deployed Link
+
+This application is deployed through [Heroku](https://www.heroku.com/what).
+> https://www.heroku.com/ placeholder link
 
 ## Table of Contents
 
@@ -51,13 +54,14 @@ SO THAT I can keep a list of books to purchase
 > [RESTful API](https://aws.amazon.com/what-is/restful-api/)
 
 > [GraphQL API](https://graphql.org/learn/)
+> - [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
 
 > [Heroku](https://www.heroku.com/what)
 
 
 ## Screenshots and Walkthrough
 
-![Alt-txt](path)
+![Alt-txt-placeholder](path-placeholder)
 
 ## Contributors
 
