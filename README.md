@@ -11,7 +11,7 @@ Behind the scenes, it consists of a [Google Books API](https://developers.google
 ## Deployed Link
 
 This application is deployed through [Heroku](https://www.heroku.com/what).
-> https://git.heroku.com/akc-book-search.git 
+> https://akc-book-search.herokuapp.com/
 
 ## Table of Contents
 
@@ -33,6 +33,15 @@ SO THAT I can keep a list of books to purchase
 
 
 ## Installation and Usage
+
+In order to run this application, you will want to `git clone` this repository so that the code is on your local machine. Run `npm i` while in the root directory in order to install all necessary [Node.js](https://nodejs.org/en/) dependencies. Then run `npm start` to launch the server.
+
+This application is hosted at Port 3001, so typing: `http://localhost:3001/` into the address bar of your browser (while the server is running) should display the user interface.
+
+Alternatively, you can simply visit my [Deployed Link](https://akc-book-search.herokuapp.com/).
+
+Once in the application, you can use the search bar to find books. Search results feature a book’s title, author, description, image, and a link to that book on [Google Books](https://books.google.com/intl/en/googlebooks/about/index.html). If you find something you like and wish to save the title, you must login to do so. If you don't already have an account, you will have an opportunity to make one. Once logged in, you can revisit your saved books and delete titles from your list if you choose to do so. Lastly, there is an option to logout.
+
 
 ## Technologies Utilized
 
@@ -62,6 +71,8 @@ SO THAT I can keep a list of books to purchase
 ## Screenshots and Walkthrough
 
 ![Alt-txt-placeholder](path-placeholder)
+*caption*
+</br>
 
 ## Contributors
 
