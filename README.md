@@ -34,7 +34,7 @@ SO THAT I can keep a list of books to purchase
 
 ## Installation and Usage
 
-In order to run this application, you will want to `git clone` this repository so that the code is on your local machine. Run `npm i` while in the root directory in order to install all necessary [Node.js](https://nodejs.org/en/) dependencies. Then run `npm start` to launch the server.
+In order to run this application, you will want to `git clone` this repository so that the code is on your local machine. Run `npm i` while in the client folder in order to install all necessary front-end [Node.js](https://nodejs.org/en/) dependencies. Run `npm i` again while in the server folder in order to install any back-end dependancies. Then run `npm start` from either the root directory OR both the client and server folders CONCURRENTLY to launch the server.
 
 This application is hosted at Port 3001, so typing: `http://localhost:3001/` into the address bar of your browser (while the server is running) should display the user interface.
 
