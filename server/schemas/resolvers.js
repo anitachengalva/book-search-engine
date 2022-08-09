@@ -5,14 +5,11 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    user: async (parent, { userId }) => {
-      return User.findOne({ _id: userId });
-    },
-
     me: async (_parent, _args, context) => {
         if (context.user) {
             const userData = await User.findOne({ _id: context.user._id })
                 .select('-__v -password');
+                // returns everything BUT password
   
             return userData;
         }
@@ -21,7 +18,7 @@ const resolvers = {
   },
 
   Mutation: {
-    createUser: async (parent, { username, email, password }) => {
+    addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(User);
 
@@ -55,7 +52,7 @@ const resolvers = {
       throw new AuthenticationError("Please login or register");
     },
 
-    deleteBook: async (parent, { book }, context) => {
+    removeBook: async (parent, { book }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
