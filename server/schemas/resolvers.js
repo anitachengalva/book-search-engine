@@ -18,22 +18,22 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
+    addUser: async (_parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(User);
 
       return { token, user };
     },
-    login: async (parent, { email, password }) => {
+    login: async (_parent, { email, password }) => {
       const user = await user.findOne({ email });
 
       if (!user) {
         throw new AuthenticationError("No user found");
       }
 
-      const validPass = await user.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
-      if (!validPass) {
+      if (!correctPw) {
         throw new AuthenticationError("Incorrect Password");
       }
 
@@ -41,7 +41,7 @@ const resolvers = {
       return { token, user };
     },
 
-    saveBook: async (parent, { userId, bookData }, context) => {
+    saveBook: async (_parent, { userId, bookData }, context) => {
       if (context.user) {
         return User.findOneAndUpdate(
           { _id: userId },
@@ -52,13 +52,14 @@ const resolvers = {
       throw new AuthenticationError("Please login or register");
     },
 
-    removeBook: async (parent, { book }, context) => {
+    removeBook: async (_parent, { book }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $pull: { savedBooks: book } },
           { new: true }
         );
+        return updatedUser;
       }
       throw new AuthenticationError("Please login or register");
     },
