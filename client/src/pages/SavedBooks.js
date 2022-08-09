@@ -5,7 +5,7 @@ import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
-import { useMutation, useQuery } from '@apollo/react-hooks';
+import { useMutation, useQuery } from '@apollo/client';
 import { REMOVE_BOOK } from '../utils/mutations';
 import { QUERY_ME} from '../utils/queries';
 
